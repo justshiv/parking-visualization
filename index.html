@@ -33,8 +33,9 @@
                 <ul class="nav navbar-nav navbar-right">
                 <li><a href="#introduction">Introduction</a></li>
                 <li><a href="#related-work">Related Work</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#conclusions">Conclusions & Future Work</a></li>
+                <li><a href="#design-process">Design Process</a></li>
+                <li><a href="#final-design">Final Design</a></li>
+                <li><a href="#conclusions">Conclusions</a></li>
                 <li><a href="#team">Team</a></li>
                 </ul>
                 </div>
@@ -44,19 +45,75 @@
         <section id="hero">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Header</h1>
+                    <div class="col-md-12" style="padding-top:50px;">
+                        <i class="fa fa-location-arrow fa-3x circle"></i>
+                        <h3 style="color:orange">ParkCheck</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 style="color:white">Finding parking should always be this easy</h1>
+                        <p style="color:#999999; font-size:15px; font-style: italic">ParkCheck shows you where to find parking on upper campus, no matter what time of day</p>
                     </div>
                 </div>
             </div>
+
+            <p class="comments-for-louis">Not quite sure whether we should be adding a picture of the app here somewhere</p>
         </section>
 
 
         <section id="introduction" class="">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Introduction</h1>
+                    <div class="col-md-6">
+                        <h3>Problem</h3>
+                        <p>
+                            All students above first year at the University of Cape Town (UCT) are eligible to park on campus if they buy a parking disk.
+                            Due to a steady increase in the number of students attending UCT, the number of students per bay has increased dramatically.
+                            This has lead to many students driving around campus for hours in search of a parking bay.
+                            The Properties and Services department is seeking a solution to this inconvenience.
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Solution</h3>
+                        <p>
+                            We have designed a mobile solution, ParkCheck, to solve this problem on upper campus.
+                            The Properties and Services department has agreed to provide the number of free bays per student parking area every minute.
+                            This allows us to determine the current parking availability, and predict future availability based on past data.
+                            ParkCheck visualizes the availability of parking per parking lot currently, and shows the predicted availability throughout the day.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Visual Queries</h3>
+                        <p></p>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <i class="fa fa-search fa-3x"></i>
+                        <h4>1. Where can I park right now?</h4>
+                        <p>
+                            Students need to be able to quickly see where they can park right now.
+                            If we can effectively answer this question, students won't have to spend valuable time driving around in search of parking.
+                            This is of the highest importance, as our student users are most likely to use the app to find parking right now.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <i class="fa fa-clock-o fa-3x"></i>
+                        <h4>2. Where can I park later?</h4>
+                        <p>
+                            If students can see the predicted parking availability for the day, they can make an educated decision on when to drive to campus.
+                            This compliments query 1, as it allows proactive students to go when the parking availability is high, potentially alleviating some of the pressure during peak hours.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-xs-12">
+                        <i class="fa fa-globe fa-3x"></i>
+                        <h4>3. Where is each parking area?</h4>
+                        <p>
+                            Campus can be confusing to navigate and people usually like to get parking bays closest to their destination.
+                            However, with time, students become familiar with the roads and locations of parking areas.
+                            Also, all parking areas are within walking distance of the whole of upper campus. This is why this query is ranked third.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -67,16 +124,200 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Related Work</h1>
+
+                        <p class="comments-for-louis">I've added the concluding paragraph to the top to make more of an intro. I'm not sure
+                                                        how to do this properly tho now. this is a bit too long for an intro</p>
+                        <p>
+                            A literature review into existing parking applications was conducted to identify the advantages and disadvantages of current implementations.
+                            These were analysed and combined with the feedback received on the initial design presentation to yield the final design.
+                            The most similar current applications identified were <i>ParkMe, SpotHero</i> and <i>Parker</i>.
+                            All of the current implementations found were involved a map application that allowed for scrolling, zooming and current location look-up.
+                            Overlaying the parking information over the 2-dimensional data of parking location proved to be very intuitive due to the familiarity of map based applications.
+                            The zoom support also helps to alleviate the effect of the small screen size constraint by allowing users to manipulate the map and data to see an overview or to focus in on specific areas.
+                            Most current applications utilized a colour gradient to help visualize the relative parking costs.
+                            Only one application, Parker, used a colour gradient to depict parking availability.All of the applications used markers and symbols to depict the parking locations.
+                            Most of the apps used the same symbol for all parking lots, and just varied the colour as per the colour gradient.
+                            Only Parker used different symbols to differentiate between street parking and parking lots.
+                            This approach allowed for faster visual queries relating to looking for different types of parking.
+                            All of the applications allowed for more information to be made visible once a parking was clicked.
+                            This allowed for a streamline overview that was not cluttered by information while still being comprehensive.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-12" style="text-align: left;">
+                        <h3>ParkMe</h3>
+                        <p>
+                            ParkMe is a mobile application that focuses on comparing parking lots by by price and distance to destination.
+                            It displays the exact distance from each parking facility to the selected destination, and how much it will cost.
+                            These are 2 common queries drivers have when looking for parking in a city, but are less applicable to the UCT use-case.
+                            On UCT upper-campus all parking lots are within walking distance from all venues, and all student bays have the same pre-paid fee.
+                            ParkMe makes good use of an intuitive colour gradient on its markers - the red marked parking areas showing less optimal parking opportunities than orange or green.
+                            We thought this was useful in quickly identifying cheap parking lots. We used this in our designs to depict price, not availability.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <img src="img/related-work/parkme.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-12" style="text-align: right; float: right">
+                        <h3>SpotHero</h3>
+
+                        <p class="comments-for-louis">Please make this longer so that the paragraphs kinda match in height?</p>
+                        <p>
+                            SpotHero also attempts to compare parking options according to price.  although it is by far the worst of the options listed here.
+                            All of the location markers are the same colour apart from the selected one.
+                            This leads to poor price comparrison.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-12" >
+                        <img src="img/related-work/spothero.jpeg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-sm-12" style="text-align: left;">
+                        <h3>Parker</h3>
+                        <p>
+                            Parker is the only app that preforms the parking availibility query unlike the other that all compare price of parking.
+                            Parker has a distinction for street parking and parking lot parking built into its interface.
+                            This is useful in immediately identifying what kind of parking it is.
+                            It uses a colour gradient to help users identify where availible parking can be found but the gradient is quite non-intuitive as it goes from green to blue to orange.
+                            The on-click pop-up of Parker is non-cluttered but still useful.
+                            One really useful feature is the display of actual parking numbers as well as capacity of parking lot on the overview as a fraction.
+                            This gives users an instant impression of the parking conditions.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <img src="img/related-work/parker.jpeg">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="design-process" class="">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Design Process</h1>
+
+            <p class="comments-for-louis">Maybe intro paragraph?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Initial Designs</h2>
+                        <p>
+                            We followed an iterative process, coming up with three initial ideas to demo to potential users.
+                            The advantages and disadvantages of each design are discussed below.
+                        </p>
+                    </div>
+
+            <p class="comments-for-louis">Can't get these bloody things to be the same length</p>
+                    <div class="col-md-4">
+                        <div class="well">
+                            <h3>Iteration 1</h3>
+                            <img src="img/initial-designs/iteration1.png">
+                            <p>This initial attempt tries to utilize a list view of the different parking lots. The outside border of each item correlates to a green to red availibility gradient. Each item attempts to visualize the parking data in a different way so as to most effictivly transfer the intended query information. This attempt lacked efficacy in many ways including: parking location, obvious meaning for all components and support for visual queries. Therefore other approaches were investigated.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="well">
+                            <h3>Iteration 2</h3>
+                            <img src="img/initial-designs/iteration2.png">
+                            <p>This attempt improves on the initial attempt by adding a map of UCT to attempt to support the "Where is the parking lot" query." It uses a green (empty) to red (full) colour gradient to inform users as to the number of spaces availible. It also uses the same gradient as a lookup connection between the list view and the spatial parking lot locations. The list view attempts to rank the parking lots in decending order of space availible. This attempt neglected the time based component of the parking data and was also slightly confusing as to which list item correlated to which parking lot on the map.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="well">
+                            <h3>Iteration 3</h3>
+                            <img src="img/initial-designs/iteration3.png">
+                            <p>This design attempted to improve on the last design by re-introducing the temporal parking information into the visualization. This design still implements a list view but now connects the list view to the spatial parking lot using the number of free bays as a symbol. This design lacked in intuitivity and is not particularly effective at conveying its intended meaning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" style="text-align:left">
+                        <h3>Design Feedback</h3>
+
+                            <ol>
+                                <li>More visual queries. Queries such as parking closest to certain buildings or at certain times on other days.</li>
+                                <li>A useful colour gradient along with texture and symbols could be used to assist visual queries.</li>
+                                <li>Number of bays left as a percentage of the maximum as well as the number of bays could be useful.</li>
+                                <li>Implement a highlight for the best parking lot right now.</li>
+                                <li>Show all values as number of bays remaining as opposed to number of filled bays.</li>
+                            </ol>
+
+                    </div>
+                    <div class="col-md-4" style="text-align:left">
+                        <img src="img/designInspiration.png">
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Applying Feedback</h3>
+                        <p>
+                            It was decided that more research was needed to investigate the effective use of colour gradients as well as time varying complex data.
+                            The illustration (left) from google maps helped in this area.
+                            The colour gradients used by google maps to show the different types of traffic vary in intensity.
+                            This aids in their differentiation for colourblind users.
+                            This variation on two channels makes for a very distinct difference between the gradient values.
+                            An identical gradient was selected for the final ParkCheck design to indicate amount of parking available.
+                            The slider bar for time variation is simple and easily understood.
+                            It was decided that a simplified version of the time slider, with added emphasis on the slider position relating to current conditions would be added to the final design.
+                            A button would be added to allow for easy return to current conditions.
+                            The final application would be implemented on a fully functioning map to benefit from the map manipulation capabilities mentioned in the literature review.
+                            The number of free bays would be displayed on the parking lot whilst in overview, and would vary along with the stored data when the slider value is changed.
+                            On-click events that bring up small windows that occlude part os the map detailing more information on each parking lot such as any restrictions, number of free bays vs total bays and the full name of the parking lot will be implemented.
+                            It was decided that implementing a "highlight" function that would inform a user of the best parking lot was not necessary as this would add clutter over and above all the standard information which is already difficult to incorporate due to screen size restrictions.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="design" class="">
+        <section id="final-design">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Design</h1>
+                        <h1>Final Design</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <h1>Final Design</h1>
+
+            <p class="comments-for-louis">Here is where i was going to add some hover-over stuff</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/iphone.png">
+                    </div>
+                    <div class="col-lg-3">
+                        <h1>Final Design</h1>
+                    </div>
+                </div>
+                <div class="row">
+
+            <p class="comments-for-louis"> Same length?</p>
+                    <div class="col-md-6 col-sm-12">
+                        <h3>Advantages</h3>
+                        <p>
+                            The final implementation boasts a simple and sleek overview design that allows for access to the primary visual query: "Where to park now?".
+                            It does this using an easily identifiable colour gradient as well as user's inate map based app usage fimiliarity.
+                            The final design manages to avoid clutter, while still clearly and easily supporting time based queries.
+                            The map based implementation of the final app leads to an easy to use interface that somwhat circumvents the screen size constraints.
+                            On-click pop-ups give extra information without cluttering or occluding data in overview mode.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <h3>Disadvantages</h3>
+                        <p>
+                            Data in the on-click pop-ups is not immediately availible. The final design also somewhat hides the temporal variation of the parking availibility.
+                            This was deemed acceptable as the temporal data is not critical to the primary visual query, but is used in the secondary query only.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -87,6 +328,13 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Conclusions & Future Work</h1>
+
+            <p class="comments-for-louis">Are we gonna talk about the API? Or maybe doing user testing with horizontal vs vertical?</p>
+                        <p>
+                            It was concluded that the visualization provides an effective tool that helps users find parking on campus.
+                            Future work is frequired in extending the visualization to differentiate between marked and unmarked bays.
+                            This would however only be possible with added investment from Properties and Services to provide the data that is required.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -96,7 +344,34 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1>Team</h1>
+
+            <p class="comments-for-louis">Kinda waffled here a bit, is this ok?</p>
+                        <h1>The Team</h1>
+                        <p>
+                            This project was completed for the <i>Visual Thinking and Visualization</i> Module.
+                            The work was divided evenly according to our individual strengths.
+                            The report content was compiled together to ensure a comprehensive write-up of the entire project.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <img src="img/team/louis.jpg" class="team-image">
+                        <h3>Louis Buys</h3>
+                        <p>
+                            Louis was responsible for the initial content creation and layout.
+                            He researched related works and compiled the literature review on visualization techniques used.
+                            He then applied these techniques to the initial app layout design.
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <img src="img/team/shiv.jpg" class="team-image">
+                        <h3>Siobhan O'Donovan</h3>
+                        <p>
+                            Siobhan was responsible for web development and user-testing.
+                            She built the website and interactive visualization of the final ParkCheck design.
+                            She also approached potential users of the app to ensure we were addressing all identified visual queries.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -104,15 +379,15 @@
     </div>
 
     <!--sticky footer-->
-    <footer id="footer">
-        <div class="container">
-            <row>
-                <p class="text-muted">
-                    This program illustrates temporarily changing the favicon using javascript.<br>Permanently changing it requires you to execute an extra server-side script to save the chosen image.
-                </p>
-            </row>
-        </div>
-    </footer>
+    <!--<footer id="footer">-->
+        <!--<div class="container">-->
+            <!--<row>-->
+                <!--<p class="text-muted">-->
+                    <!--This program illustrates temporarily changing the favicon using javascript.<br>Permanently changing it requires you to execute an extra server-side script to save the chosen image.-->
+                <!--</p>-->
+            <!--</row>-->
+        <!--</div>-->
+    <!--</footer>-->
 </body>
 
     <!--scripts-->

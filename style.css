@@ -1,3 +1,9 @@
+.comments-for-louis {
+    color: red;
+    font-weight:bold;
+    font-size: 20px;
+}
+
 html {
     position: relative;
     min-height:100%;
@@ -7,20 +13,73 @@ body {
 
     text-align: center;
     /*margin-top:40px;*/
-    margin-bottom: 150px;
+    /*margin-bottom: 150px;*/
+
+    /*font-family: 'opensans-regular', sans-serif;*/
+   /*font-weight: normal;*/
+   /*font-size: 15px;*/
+   line-height: 30px;
+	/*color: #838C95;*/
+
+   -webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
+	-webkit-text-size-adjust: 100%;
 }
 
-nav {
+h1 {
     text-transform: uppercase;
 }
 
-.navbar-brand {
-    font-weight:bold;
+h2 {
+    text-transform: uppercase;
+}
+h3 {
+    text-transform: uppercase;
+}
+
+.fa {
+    color:orange;
+}
+
+.navbar-default {
+    text-transform: uppercase;
+    background-color: #3d3d3d;
+    border-color: #292929;
+}
+.navbar-default .navbar-nav>li>a{
+    transition: color .2s ease-in-out;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand {
+    color: orange;
+    font-weight:500;
+    font-size:24px;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: orange;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+    background-color: transparent;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    border: none;
 }
 
 #hero {
-    height: 600px;
-    /*background-color:red;*/
+    height: 500px;
+    background: url("img/hero-banner.jpeg");
+    /*background: url("img/hero.png");*/
+    /*background-size: 200px 200px;*/
 }
 
 /*#introduction {*/
@@ -43,15 +102,38 @@ nav {
     /*background-color:brown;*/
 /*}*/
 
+section {
+    margin: 0 auto;
+}
 
-section > .container > .row {
-    min-height: 500px;
-    padding-top:60px;
+
+section > .container {
+    /*min-height: 500px;*/
+    padding-top:40px;
+    width:75%;
 }
 
 section > .container {
 
     border-top: 1px solid #e7e7e7;
+}
+
+.container-fluid{
+    padding-left:30px;
+    padding-right:30px;
+}
+
+.circle {
+    padding-top:8px;
+    height:60px;
+    width:60px;
+    color: orange;
+    border: 2px solid orange;
+    border-radius: 50%;
+}
+
+.row {
+    margin:0px 0px 40px 0px;
 }
 
 footer {
@@ -69,6 +151,6 @@ footer {
     line-height: 2;
 }
 
-.back-to-top {
-
+.team-image {
+    border-radius: 50%;
 }
